@@ -24,6 +24,23 @@ Install the package with Composer:
 
 The package will automatically register itself.
 
+## Configuration
+
+You should add to `services.php` config file the following configuration:
+
+```php
+return [
+  // ...
+
+  'procountor' => [
+    'client_id' => env('PROCOUNTOR_CLIENT_ID'),
+    'client_secret' => env('PROCOUNTOR_CLIENT_SECRET'),
+    'redirect_uri' => env('PROCOUNTOR_REDIRECT_URI'),
+    'api_key' => env('PROCOUNTOR_API_KEY'),
+  ],
+]
+```
+
 ## Methods
 
 - `Procountor::getConfig()`

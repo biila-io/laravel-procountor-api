@@ -1,11 +1,11 @@
 <?php
 
-namespace BiilaIo\Procountor\Exception;
+namespace BiilaIo\Procountor\Exceptions;
 
 use RuntimeException;
 use Illuminate\Http\Client\Response;
 
-class ProcountorApiResponseException extends RuntimeException
+class ProcountorApiException extends RuntimeException
 {
     /**
      * Create exception instance for access-token-fetch-failed.

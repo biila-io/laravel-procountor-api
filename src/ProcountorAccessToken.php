@@ -2,7 +2,7 @@
 
 namespace BiilaIo\Procountor;
 
-use BiilaIo\Procountor\Exception\ProcountorApiResponseException;
+use BiilaIo\Procountor\Exceptions\ProcountorApiException;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Redis;
 use Predis\Response\Status;
@@ -88,7 +88,7 @@ class ProcountorAccessToken
         ]);
 
         if (!$response->successful()) {
-            throw ProcountorApiResponseException::accessTokenFetchFailed($response);
+            throw ProcountorApiException::accessTokenFetchFailed($response);
         }
 
         $this->storeToken(
