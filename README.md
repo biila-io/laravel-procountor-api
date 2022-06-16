@@ -1,5 +1,5 @@
 <p>
-  <img src="https://biila.io/images/biila.svg" width="150">
+  <img src="https://biila.io/storage/logos/biila-dev-blue.svg" width="300">
 </p>
 
 # Laravel Wrapper for Procountor API
