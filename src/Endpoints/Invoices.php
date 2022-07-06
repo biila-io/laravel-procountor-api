@@ -4,6 +4,9 @@ namespace BiilaIo\Procountor\Endpoints;
 
 use Illuminate\Http\Client\Response;
 
+/**
+ * @mixin \BiilaIo\Procountor\Procountor
+ */
 trait Invoices
 {
     /**

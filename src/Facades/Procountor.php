@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static string|null accessTokenExpiresAt()
  * @method static string accessToken()
  * @method static bool refreshAccessToken()
+ * @method static string|null getAccountingCode()
  * @method static \Illuminate\Http\Client\Response getInvoices(array $query = [])
  * @method static \Illuminate\Http\Client\Response getInvoice($invoiceId)
  * @method static \Illuminate\Http\Client\Response storeInvoice(array $data)

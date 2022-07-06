@@ -51,6 +51,8 @@ return [
   - Get the access token expiration time.
 - `Procountor::refreshAccessToken()`
   - Refresh the access token.
+- `Procountor::getAccountingCode()`
+  - Get the accounting code defined in the config.
 - `Procountor::getInvoices($query)`
   - Get a list of invoices.
 - `Procountor::getInvoice($invoiceId)`

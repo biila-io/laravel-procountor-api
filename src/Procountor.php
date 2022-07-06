@@ -64,6 +64,16 @@ class Procountor
     }
 
     /**
+     * Get the accounting code from the config.
+     *
+     * @return string|null
+     */
+    public function getAccountingCode(): ?string
+    {
+        return $this->config->accountingCode;
+    }
+
+    /**
      * Return http with authentication set in as default.
      *
      * @param bool $auth

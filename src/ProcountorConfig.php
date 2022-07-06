@@ -5,11 +5,18 @@ namespace BiilaIo\Procountor;
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Fluent;
+use Illuminate\Support\Str;
 
 class ProcountorConfig
 {
     protected Fluent $config;
 
+    /**
+     * The ProcountorConfig constructor.
+     *
+     * @param array $servicesConfig
+     * @param array $config
+     */
     public function __construct(array $servicesConfig, array $config)
     {
         $this->config = new Fluent(array_merge($servicesConfig, $config));
@@ -41,7 +48,7 @@ class ProcountorConfig
      */
     public function __call($method, $parameters)
     {
-        return $this->config->__call($method, $parameters);
+        return $this->config->__call(Str::snake($method), $parameters);
     }
 
     /**
@@ -52,7 +59,7 @@ class ProcountorConfig
      */
     public function __get($key)
     {
-        return $this->config->__get($key);
+        return $this->config->__get(Str::snake($key));
     }
 
     /**
@@ -64,7 +71,7 @@ class ProcountorConfig
      */
     public function __set($key, $value)
     {
-        return $this->config->__set($key, $value);
+        return $this->config->__set(Str::snake($key), $value);
     }
 
     /**
@@ -75,7 +82,7 @@ class ProcountorConfig
      */
     public function __isset($key)
     {
-        return $this->config->__isset($key);
+        return $this->config->__isset(Str::snake($key));
     }
 
     /**
@@ -86,6 +93,6 @@ class ProcountorConfig
      */
     public function __unset($key)
     {
-        return $this->config->__unset($key);
+        return $this->config->__unset(Str::snake($key));
     }
 }

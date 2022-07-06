@@ -8,4 +8,6 @@ return [
 
     'storage_key' => 'procountor:accessToken',
 
+    'accounting_code' => env('PROCOUNTOR_ACCOUNTING_CODE'),
+
 ];
